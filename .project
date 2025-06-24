@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>FactoryMethodPatternExample</name>
+=======
+	<name>SingletonPatternExample</name>
+>>>>>>> fd357fba97fa3e01ccc96252a43a11288885f391
 	<comment></comment>
 	<projects>
 	</projects>
