@@ -1,0 +1,108 @@
+
+rania@AddankiRani MINGW64 ~ (main)
+$ cd ~/GitDemo
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git remote -v
+origin  https://gitlab.com/AddankiRani01/gitdemo.git (fetch)
+origin  https://gitlab.com/AddankiRani01/gitdemo.git (push)
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git branch
+* main
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ echo "Welcome to GitDemo" > welcome.txt
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git add welcome.txt
+git commit -m "Added welcome.txt"
+git push -u origin main
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+[main 051162c] Added welcome.txt
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+To https://gitlab.com/AddankiRani01/gitdemo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://gitlab.com/AddankiRani01/gitdemo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ ^C
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git pull origin main --allow-unrelated-histories
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 2.73 KiB | 311.00 KiB/s, done.
+From https://gitlab.com/AddankiRani01/gitdemo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+hint: Waiting for your editor to close the file... notepad++.exe -multiInst -nosession: line 1: notepad++.exe: command not found
+error: there was a problem with the editor 'notepad++.exe -multiInst -nosession'
+Not committing merge; use 'git commit' to complete the merge.
+
+rania@AddankiRani MINGW64 ~/GitDemo (main|MERGING)
+$ git push -u origin main
+To https://gitlab.com/AddankiRani01/gitdemo.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://gitlab.com/AddankiRani01/gitdemo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+rania@AddankiRani MINGW64 ~/GitDemo (main|MERGING)
+$ ^C
+
+rania@AddankiRani MINGW64 ~/GitDemo (main|MERGING)
+$ git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        new file:   README.md
+
+
+rania@AddankiRani MINGW64 ~/GitDemo (main|MERGING)
+$ git add .
+
+rania@AddankiRani MINGW64 ~/GitDemo (main|MERGING)
+$ git commit
+hint: Waiting for your editor to close the file... notepad++.exe -multiInst -nosession: line 1: notepad++.exe: command not found
+error: there was a problem with the editor 'notepad++.exe -multiInst -nosession'
+Please supply the message using either -m or -F option.
+
+rania@AddankiRani MINGW64 ~/GitDemo (main|MERGING)
+$ git fetch origin
+git reset --hard origin/main
+HEAD is now at e48c2ef Initial commit
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ ^C
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ echo "Welcome to GitDemo" > welcome.txt
+git add welcome.txt
+git commit -m "Added welcome.txt"
+git push -u origin main
+warning: in the working copy of 'welcome.txt', LF will be replaced by CRLF the next time Git touches it
+[main aeaa745] Added welcome.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 welcome.txt
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://gitlab.com/AddankiRani01/gitdemo.git
+   e48c2ef..aeaa745  main -> main
+branch 'main' set up to track 'origin/main'.
+

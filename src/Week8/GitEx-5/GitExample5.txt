@@ -1,0 +1,44 @@
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git status
+On branch GitWork
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        FETCH_HEAD
+        main
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ ^C
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ Cgit add .
+bash: Cgit: command not found
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git add .
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git commit -m "Added main and FETCH_HEAD files"
+[GitWork c8c9940] Added main and FETCH_HEAD files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 FETCH_HEAD
+ create mode 100644 main
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git push origin GitWork
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 848 bytes | 424.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: To create a merge request for GitWork, visit:
+remote:   https://gitlab.com/AddankiRani01/gitdemo/-/merge_requests/new?merge_request%5Bsource_branch%5D=GitWork
+remote:
+To https://gitlab.com/AddankiRani01/gitdemo.git
+ * [new branch]      GitWork -> GitWork
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$

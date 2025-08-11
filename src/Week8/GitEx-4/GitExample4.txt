@@ -1,0 +1,47 @@
+
+rania@AddankiRani MINGW64 ~ (main)
+$ cd ~/GitDemo
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ ^[[200~git init
+bash: $'\E[200~git': command not found
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git init
+Reinitialized existing Git repository in C:/Users/rania/GitDemo/.git/
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git remote add origin https://gitlab.com/learning-program-solutions/GitDemo.git
+error: remote origin already exists.
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git remote -v
+origin  https://gitlab.com/AddankiRani01/gitdemo.git (fetch)
+origin  https://gitlab.com/AddankiRani01/gitdemo.git (push)
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ echo "This is my GitDemo hands-on" > demo.txt
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git add demo.txt
+warning: in the working copy of 'demo.txt', LF will be replaced by CRLF the next time Git touches it
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git commit -m "Add demo.txt for Git hands-on"
+[GitWork d4d9d44] Add demo.txt for Git hands-on
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 demo.txt
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$ ^C
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitWork)
+$

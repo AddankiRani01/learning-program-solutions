@@ -1,0 +1,42 @@
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ # Make a .log file
+echo "This is a log file" > debug.log
+
+# Make a folder called 'log' and add a file inside
+mkdir log
+echo "App error logs" > log/error.log
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ # Create a .gitignore file
+nano .gitignore
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git add .gitignore
+git commit -m "Added .gitignore to ignore .log files and log folder"
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+[main 5cbcedd] Added .gitignore to ignore .log files and log folder
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://gitlab.com/AddankiRani01/gitdemo.git
+   aeaa745..5cbcedd  main -> main
+branch 'main' set up to track 'origin/main'.
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$

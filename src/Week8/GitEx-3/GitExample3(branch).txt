@@ -1,0 +1,84 @@
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git branch GitNewBranch
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git branch -a
+  GitNewBranch
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git checkout GitNewBranch
+Switched to branch 'GitNewBranch'
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitNewBranch)
+$ echo "This is a file in GitNewBranch" > branchfile.txt
+git add branchfile.txt
+warning: in the working copy of 'branchfile.txt', LF will be replaced by CRLF the next time Git touches it
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitNewBranch)
+$
+
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitNewBranch)
+$ git commit -m "Added branchfile.txt in GitNewBranch"
+[GitNewBranch b32e1b9] Added branchfile.txt in GitNewBranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branchfile.txt
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitNewBranch)
+$ git status
+On branch GitNewBranch
+nothing to commit, working tree clean
+
+rania@AddankiRani MINGW64 ~/GitDemo (GitNewBranch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git diff main GitNewBranch
+diff --git a/branchfile.txt b/branchfile.txt
+new file mode 100644
+index 0000000..70ab14d
+--- /dev/null
++++ b/branchfile.txt
+@@ -0,0 +1 @@
++This is a file in GitNewBranch
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+No files need merging
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git merge GitNewBranch
+Updating 5cbcedd..b32e1b9
+Fast-forward
+ branchfile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branchfile.txt
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git log --oneline --graph --decorate
+* b32e1b9 (HEAD -> main, GitNewBranch) Added branchfile.txt in GitNewBranch
+* 5cbcedd (origin/main, origin/HEAD) Added .gitignore to ignore .log files and log folder
+* aeaa745 Added welcome.txt
+* e48c2ef Initial commit
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git branch -d GitNewBranch
+Deleted branch GitNewBranch (was b32e1b9).
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$ git branch
+* main
+
+rania@AddankiRani MINGW64 ~/GitDemo (main)
+$
